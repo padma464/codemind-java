@@ -1,30 +1,21 @@
 import java.util.Scanner;
 class palindrome
 {
-    public static boolean ispalindrome(int m)
-    {
-        int sum=0,r,temp=m;
-        while(m>0)
-        {
-            r=m%10;
-            sum=sum*10+r;
-            m=m/10;
-        }
-        if(sum==temp)
-           return true;
-        else
-           return false;
-    }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,res;
+        int n,s,d=0,r;
         n=sc.nextInt();
-        n=Math.abs(n);
-        if(ispalindrome(n))
-         System.out.println("True");
+        s=n;
+        while(n>0)
+        {
+            r=n%10;
+            d=d*10+r;
+            n=n/10;
+        }
+        if(d==s)
+           System.out.println("True");
         else
           System.out.println("False");
-        
     }
 }
