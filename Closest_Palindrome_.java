@@ -1,27 +1,27 @@
 import java.util.Scanner;
 class palindrome
 {
-    public static boolean ispalindrome(int m)
+    public static boolean ispalindrome(int n)
     {
-        int sum=0,r,temp=m;
-        while(m>0)
-        {
-            r=m%10;
-            sum=sum*10+r;
-            m=m/10;
-        }
-        if(sum==temp)
-           return true;
-        else
-           return false;
+        int r,s=0;
+        int temp=n;
+       while(n>0)
+       {
+           r=n%10;
+           s=s*10+r;
+           n=n/10;
+       }
+       if(s==temp)
+         return true;
+       else
+         return false;
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,i,s,d;
+        int n,s,k;
         n=sc.nextInt();
-        
-        for(i=n+1;;i++)
+        for(int i=n+1;;i++)
         {
             if(ispalindrome(i))
             {
@@ -29,21 +29,19 @@ class palindrome
                 break;
             }
         }
-        for(i=n-1;;i--)
+        for(int i=n-1;;i--)
         {
             if(ispalindrome(i))
             {
-                d=i;
+                k=i;
                 break;
             }
         }
-        if(Math.abs(n-s)>Math.abs(n-d))
-           System.out.print(d);
-        else if(Math.abs(n-d)==Math.abs(n-s))
-           System.out.print(d+" "+s); 
+        if((s-n)>(n-k))
+           System.out.println(k);
+        else if((s-n)==(n-k))
+           System.out.println(k+" "+s);
         else
-          System.out.print(s);
-        
-        
+           System.out.println(s);
     }
 }
