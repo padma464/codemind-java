@@ -8,9 +8,9 @@ class sample
         n=sc.nextInt();
             for(int i=1;i<=n;i++)
             {
-                for(int j=1;j<=n;j++)
+                for(int j=1;j<=i;j++)
                 {
-                     System.out.print((char)(i+64)+" ");
+                     System.out.print(j);
                 }
                 System.out.println();
             }
