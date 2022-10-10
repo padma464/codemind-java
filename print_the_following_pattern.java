@@ -4,16 +4,17 @@ class sample
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,m;
+        int n;
         n=sc.nextInt();
-        m=n;
             for(int i=1;i<=n;i++)
             {
-                for(int j=1;j<=m;j++)
+                for(int j=1;j<=n;j++)
                 {
-                    System.out.print(j);
+                    if(j==i)
+                    System.out.print("0");
+                    else
+                     System.out.print("x");
                 }
-                m--;
                 System.out.println();
             }
     }
