@@ -18,7 +18,7 @@ class primesbtwminandmax
     }
     public static void main(String args[])
     {
-        int n,x[],c=0,i,s,k;
+        int n,x[],c=0,i;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
         x=new int[n];
